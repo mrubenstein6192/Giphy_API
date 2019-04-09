@@ -2,7 +2,7 @@
 
 The user will be able to find 10 gifs for any of the animals available upon the page's load.  The user will also have the ability to add an animal he/she wants that does not appear in the inital list.
 
-## ools Used
+## Tools Used
 
 -HTML
 
