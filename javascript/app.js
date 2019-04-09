@@ -65,11 +65,32 @@ function displayAnimalsInfo() {
       var gifDiv = $("<div>");
       var rating = results[i].rating;
       var p = $("<p>").text("Rating: " + rating);
+      
       var animalImage = $("<img>");
+      
       animalImage.attr("src", results[i].images.fixed_height_still.url);
-      gifDiv.append(p);
+      
+      
+      animalImage.attr("data-still", results[i].images.fixed_height_still.url);
+      
+      animalImage.attr("data-animate", results[i].images.fixed_height.url);
+      
+      animalImage.addClass("gif");
+      
       gifDiv.append(animalImage);
+      gifDiv.append(p);
+
       $("#gifs-appear-here").prepend(gifDiv);
     }
   });
 }
+
+$(document).on("click", ".gif", function() {
+  
+  if($(this).attr("data-animate") === $(this).attr("src")) {
+  $(this).attr("src", $(this).attr("data-still"));
+} 
+else {
+  $(this).attr("src", $(this).attr("data-animate"));
+}
+});
