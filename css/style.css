@@ -1,0 +1,26 @@
+button,
+div,
+form,
+input {
+  margin: 10px;
+}
+
+p {
+font-size: large;
+}
+
+#add{
+font-size: large;
+color: maroon;
+font-style: italic;
+}
+
+button {
+  background-color: rgb(197, 227, 228);
+  padding: 2px;
+  font-size: large;
+}
+
+body{
+  background-color: antiquewhite;
+}
