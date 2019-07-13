@@ -49,7 +49,7 @@ function displayAnimalsInfo() {
 
   var animal = $(this).attr("data-name");
   
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&apikey=y01f8RntN1lrAS5wYBlQhpevmuuc1uzJ&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&apikey=y01f8RntN1lrAS5wYBlQhpevmuuc1uzJ&limit=9";
 
   $.ajax({
     url: queryURL,
@@ -62,6 +62,8 @@ function displayAnimalsInfo() {
     
     for (var i = 0; i < results.length; i++){
       var gifDiv = $("<div>");
+      gifDiv.css("display", "inline-block");
+      
       var rating = results[i].rating;
       var p = $("<p>").text("Rating: " + rating);
       
@@ -76,10 +78,12 @@ function displayAnimalsInfo() {
       
       animalImage.addClass("gif");
       
+      animalImage.css("width", "200px").css("height", "200px")
+
       gifDiv.append(animalImage);
       gifDiv.append(p);
 
-      animalImage.css("display", "inline-block").css("width", "250px").css("height", "250px")
+     
 
       $("#gifs-appear-here").prepend(gifDiv);
     }
