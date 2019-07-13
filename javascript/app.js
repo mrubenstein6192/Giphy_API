@@ -10,7 +10,6 @@ var animals = ["Axolotl", "Bird", "Cat", "Dog", "Elephant", "Fish", "Giraffe", "
   for (var i = 0; i < animals.length; i++) {
 
     // Then dynamically generating buttons for each animal in the array
-    // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
     var a = $("<button>");
     // Adding a class of animal to our button
     a.addClass("animal");
@@ -79,6 +78,8 @@ function displayAnimalsInfo() {
       
       gifDiv.append(animalImage);
       gifDiv.append(p);
+
+      animalImage.css("display", "inline-block").css("width", "250px").css("height", "250px")
 
       $("#gifs-appear-here").prepend(gifDiv);
     }
