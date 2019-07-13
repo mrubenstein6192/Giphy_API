@@ -18,8 +18,16 @@ font-style: italic;
 
 button {
   background-color: rgb(197, 227, 228);
-  padding: 2px;
+  padding: 5px;
   font-size: large;
+  border-radius: 10%;
+  border: 2px solid maroon;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: maroon; /* Green */
+  color: white;
 }
 
 body{
