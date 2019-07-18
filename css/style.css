@@ -1,8 +1,7 @@
-button,
 div,
 form,
 input {
-  margin: 10px;
+  margin: 3px;
 }
 
 p {
@@ -16,6 +15,23 @@ color: maroon;
 font-style: italic;
 }
 
+#add-animal {
+  background-color: rgb(230, 154, 167);
+  padding: 5px 15px;
+  font-size: large;
+  border-radius: 10%;
+  border: 2px solid purple;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 5px
+}
+
+#add-animal:hover {
+  background-color: skyblue; /* Green */
+  color: black;
+}
+
 button {
   background-color: rgb(197, 227, 228);
   padding: 5px 15px;
@@ -25,6 +41,7 @@ button {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 10px
 }
 button:hover {
   background-color: maroon; /* Green */
@@ -33,6 +50,29 @@ button:hover {
 
 body{
   background-color: antiquewhite;
+}
+
+.buttonOption{
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  font-size: large;
+  border-radius: 10%;
+  border: 2px solid yellow;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 10px;
+}
+
+.buttonOption:hover {
+  background-color: orange;
+  color: black;
+  border: 2px solid black;
+}
+
+.jumbotron{
+  background-color: rgb(2, 2, 94);
 }
 
 /* #gifs-appear-here {
