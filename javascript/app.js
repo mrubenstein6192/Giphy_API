@@ -1,8 +1,43 @@
 var animals = ["Bird", "Cat", "Dog", "Fish", "Otter", "Pig", "Snake", "Whale"];
 var sports = ["Baseball", "Basketball", "Football", "Hockey", "Soccer"];
 var superheroes = ["Batman", "Black Widow", "Captain America", "Iron Man", "Spiderman", "Superman", "Wolverine", "Wonder Woman"]
+
+function buttonsOptions() {
+  var animalButton = $("<button>");
+  animalButton.addClass("buttonOption");
+  animalButton.text("Animals");
+  animalButton.attr("data-name", "animals")
+  $("#button-options").append(animalButton)
+
+  var sportsButton = $("<button>");
+  sportsButton.addClass("buttonOption");
+  sportsButton.text("Sports");
+  sportsButton.attr("data-name", "sports")
+  $("#button-options").append(sportsButton)
+
+  var heroesButton = $("<button>");
+  heroesButton.addClass("buttonOption");
+  heroesButton.text("Heroes");
+  heroesButton.attr("data-name", "heroes")
+  $("#button-options").append(heroesButton)
+}
+
+$(document).on("click", ".buttonOption", function() {
+  if ($(this).attr("data-name") === "animals") {
+    
+  }
+  else if ($(this).attr("data-name") === "sports") {
+    
+  }
+  else if ($(this).attr("data-name") === "heroes") {
+    
+  }
+})
+
+
+
  // Function for displaying animals data
- function renderButtons() {
+ function renderButtonsAnimals() {
 
   // Deleting the buttons prior to adding new animals
   // (this is necessary otherwise you will have repeat buttons)
@@ -24,6 +59,41 @@ var superheroes = ["Batman", "Black Widow", "Captain America", "Iron Man", "Spid
   }
 }
 
+function renderButtonsSports(){
+  $("#buttons-view").empty();
+
+  for (var i = 0; i < sports.length; i++) {
+
+    // Then dynamically generating buttons for each animal in the array
+    var a = $("<button>");
+    // Adding a class of animal to our button
+    a.addClass("animal");
+    // Adding a data-attribute
+    a.attr("data-name", sports[i]);
+    // Providing the initial button text
+    a.text(sports[i]);
+    // Adding the button to the buttons-view div
+    $("#buttons-view-sports").append(a);
+  }
+}
+function renderButtonsHeroes() {
+  $("#buttons-view").empty();
+
+  for (var i = 0; i < superheroes.length; i++) {
+
+    // Then dynamically generating buttons for each animal in the array
+    var a = $("<button>");
+    // Adding a class of animal to our button
+    a.addClass("animal");
+    // Adding a data-attribute
+    a.attr("data-name", superheroes[i]);
+    // Providing the initial button text
+    a.text(superheroes[i]);
+    // Adding the button to the buttons-view div
+    $("#buttons-view-superheroes").append(a);
+  }
+}
+
 // This function handles events where one button is clicked
 $("#add-animal").on("click", function(event) {
   event.preventDefault();
@@ -36,16 +106,16 @@ $("#add-animal").on("click", function(event) {
   console.log(animals);
 
   // Calling renderButtons which handles the processing of our animals array
-  renderButtons();
+  renderButtonsAnimals();
   $("#animal-input").val("");
 });
 
 // Function for displaying the animal info
 // Using $(document).on instead of $(".animal").on to add event listeners to dynamically generated elements
 $(document).on("click", ".animal", displayAnimalsInfo);
-
 // Calling the renderButtons function to display the initial buttons
-renderButtons();
+buttonsOptions();
+renderButtonsAnimals();
 
 function displayAnimalsInfo() {
 
