@@ -23,6 +23,7 @@ function buttonsOptions() {
 }
 
 $(document).on("click", ".buttonOption", function() {
+  $("#animal-form").show();
   if ($(this).attr("data-name") === "animals") {
     renderButtonsAnimals();
   }
@@ -115,6 +116,7 @@ $("#add-animal").on("click", function(event) {
 $(document).on("click", ".animal", displayAnimalsInfo);
 // Calling the renderButtons function to display the initial buttons
 buttonsOptions();
+$("#animal-form").hide();
 // renderButtonsAnimals();
 
 function displayAnimalsInfo() {
