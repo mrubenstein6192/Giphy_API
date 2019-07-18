@@ -24,13 +24,13 @@ function buttonsOptions() {
 
 $(document).on("click", ".buttonOption", function() {
   if ($(this).attr("data-name") === "animals") {
-    
+    renderButtonsAnimals();
   }
   else if ($(this).attr("data-name") === "sports") {
-    
+    renderButtonsSports()
   }
   else if ($(this).attr("data-name") === "heroes") {
-    
+    renderButtonsHeroes()
   }
 })
 
@@ -38,7 +38,7 @@ $(document).on("click", ".buttonOption", function() {
 
  // Function for displaying animals data
  function renderButtonsAnimals() {
-
+  $("h1").text("Animal GIFs")
   // Deleting the buttons prior to adding new animals
   // (this is necessary otherwise you will have repeat buttons)
   $("#buttons-view").empty();
@@ -61,7 +61,7 @@ $(document).on("click", ".buttonOption", function() {
 
 function renderButtonsSports(){
   $("#buttons-view").empty();
-
+  $("h1").text("Sports GIFs")
   for (var i = 0; i < sports.length; i++) {
 
     // Then dynamically generating buttons for each animal in the array
@@ -73,12 +73,12 @@ function renderButtonsSports(){
     // Providing the initial button text
     a.text(sports[i]);
     // Adding the button to the buttons-view div
-    $("#buttons-view-sports").append(a);
+    $("#buttons-view").append(a);
   }
 }
 function renderButtonsHeroes() {
   $("#buttons-view").empty();
-
+  $("h1").text("Superhero GIFs")
   for (var i = 0; i < superheroes.length; i++) {
 
     // Then dynamically generating buttons for each animal in the array
@@ -90,7 +90,7 @@ function renderButtonsHeroes() {
     // Providing the initial button text
     a.text(superheroes[i]);
     // Adding the button to the buttons-view div
-    $("#buttons-view-superheroes").append(a);
+    $("#buttons-view").append(a);
   }
 }
 
@@ -115,7 +115,7 @@ $("#add-animal").on("click", function(event) {
 $(document).on("click", ".animal", displayAnimalsInfo);
 // Calling the renderButtons function to display the initial buttons
 buttonsOptions();
-renderButtonsAnimals();
+// renderButtonsAnimals();
 
 function displayAnimalsInfo() {
 
