@@ -1,4 +1,6 @@
-var animals = ["Axolotl", "Bird", "Cat", "Dog", "Elephant", "Fish", "Giraffe", "Horse", "Iguana", "Jaguar", "Kangaroo", "Lion", "Mouse", "Numbat", "Otter", "Pig", "Quail", "Red Panda", "Snake", "Tiger", "Umbrellabird", "Vulture", "Whale", "Yak", "Zebra"];
+var animals = ["Bird", "Cat", "Dog", "Fish", "Otter", "Pig", "Snake", "Whale"];
+var sports = ["Baseball", "Basketball", "Football", "Hockey", "Soccer"];
+var superheroes = ["Batman", "Black Widow", "Captain America", "Iron Man", "Spiderman", "Superman", "Wolverine", "Wonder Woman"]
  // Function for displaying animals data
  function renderButtons() {
 
