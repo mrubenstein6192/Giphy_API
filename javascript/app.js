@@ -137,7 +137,7 @@ function renderButtonsMusic() {
   }
 }
 function renderButtonsMovies() {
-  $("h1").text("Animal GIFs")
+  $("h1").text("Movies GIFs")
   // Deleting the buttons prior to adding new animals
   // (this is necessary otherwise you will have repeat buttons)
   $("#buttons-view").empty();
