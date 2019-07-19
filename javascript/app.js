@@ -1,6 +1,9 @@
 var animals = ["Bird", "Cat", "Dog", "Fish", "Otter", "Pig", "Snake", "Whale"];
 var sports = ["Baseball", "Basketball", "Football", "Hockey", "Soccer"];
-var superheroes = ["Batman", "Black Widow", "Captain America", "Iron Man", "Spiderman", "Superman", "Wolverine", "Wonder Woman"]
+var superheroes = ["Batman", "Black Widow", "Captain America", "Iron Man", "Spider-man", "Superman", "Wolverine", "Wonder Woman"]
+var movies = ["The Avengers", "Back to the Future", "Independence Day", "Step Brothers", "Zoolander"]
+var music = ["Ariana Grande", "Beyonce", "Chance the Rapper", "Ed Sheeran", "Eminem", "Taylor Swift"]
+
 
 function buttonsOptions() {
   var animalButton = $("<button>");
@@ -20,6 +23,18 @@ function buttonsOptions() {
   heroesButton.text("Heroes");
   heroesButton.attr("data-name", "heroes")
   $("#button-options").append(heroesButton)
+
+  var musicButton = $("<button>");
+  musicButton.addClass("buttonOption");
+  musicButton.text("Music");
+  musicButton.attr("data-name", "music")
+  $("#button-options").append(musicButton)
+
+  var movieButton = $("<button>");
+  movieButton.addClass("buttonOption");
+  movieButton.text("Movies");
+  movieButton.attr("data-name", "movies")
+  $("#button-options").append(movieButton)
 }
 
 $(document).on("click", ".buttonOption", function() {
@@ -32,6 +47,12 @@ $(document).on("click", ".buttonOption", function() {
   }
   else if ($(this).attr("data-name") === "heroes") {
     renderButtonsHeroes()
+  }
+  else if ($(this).attr("data-name") === "music") {
+    renderButtonsMusic()
+  }
+  else if ($(this).attr("data-name") === "movies") {
+    renderButtonsMovies()
   }
 })
 
@@ -90,6 +111,48 @@ function renderButtonsHeroes() {
     a.attr("data-name", superheroes[i]);
     // Providing the initial button text
     a.text(superheroes[i]);
+    // Adding the button to the buttons-view div
+    $("#buttons-view").append(a);
+  }
+}
+function renderButtonsMusic() {
+  $("h1").text("Music GIFs")
+  // Deleting the buttons prior to adding new animals
+  // (this is necessary otherwise you will have repeat buttons)
+  $("#buttons-view").empty();
+
+  // Looping through the array of animals
+  for (var i = 0; i < music.length; i++) {
+
+    // Then dynamically generating buttons for each animal in the array
+    var a = $("<button>");
+    // Adding a class of animal to our button
+    a.addClass("animal");
+    // Adding a data-attribute
+    a.attr("data-name", music[i]);
+    // Providing the initial button text
+    a.text(music[i]);
+    // Adding the button to the buttons-view div
+    $("#buttons-view").append(a);
+  }
+}
+function renderButtonsMovies() {
+  $("h1").text("Animal GIFs")
+  // Deleting the buttons prior to adding new animals
+  // (this is necessary otherwise you will have repeat buttons)
+  $("#buttons-view").empty();
+
+  // Looping through the array of animals
+  for (var i = 0; i < movies.length; i++) {
+
+    // Then dynamically generating buttons for each animal in the array
+    var a = $("<button>");
+    // Adding a class of animal to our button
+    a.addClass("animal");
+    // Adding a data-attribute
+    a.attr("data-name", movies[i]);
+    // Providing the initial button text
+    a.text(movies[i]);
     // Adding the button to the buttons-view div
     $("#buttons-view").append(a);
   }
