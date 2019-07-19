@@ -8,33 +8,33 @@ var music = ["Ariana Grande", "Beyonce", "Chance the Rapper", "Ed Sheeran", "Emi
 function buttonsOptions() {
   var animalButton = $("<button>");
   animalButton.addClass("buttonOption");
-  animalButton.text("Animals");
+  animalButton.text("Start");
   animalButton.attr("data-name", "animals")
   $("#button-options").append(animalButton)
 
-  var sportsButton = $("<button>");
-  sportsButton.addClass("buttonOption");
-  sportsButton.text("Sports");
-  sportsButton.attr("data-name", "sports")
-  $("#button-options").append(sportsButton)
+  // var sportsButton = $("<button>");
+  // sportsButton.addClass("buttonOption");
+  // sportsButton.text("Sports");
+  // sportsButton.attr("data-name", "sports")
+  // $("#button-options").append(sportsButton)
 
-  var heroesButton = $("<button>");
-  heroesButton.addClass("buttonOption");
-  heroesButton.text("Heroes");
-  heroesButton.attr("data-name", "heroes")
-  $("#button-options").append(heroesButton)
+  // var heroesButton = $("<button>");
+  // heroesButton.addClass("buttonOption");
+  // heroesButton.text("Heroes");
+  // heroesButton.attr("data-name", "heroes")
+  // $("#button-options").append(heroesButton)
 
-  var musicButton = $("<button>");
-  musicButton.addClass("buttonOption");
-  musicButton.text("Music");
-  musicButton.attr("data-name", "music")
-  $("#button-options").append(musicButton)
+  // var musicButton = $("<button>");
+  // musicButton.addClass("buttonOption");
+  // musicButton.text("Music");
+  // musicButton.attr("data-name", "music")
+  // $("#button-options").append(musicButton)
 
-  var movieButton = $("<button>");
-  movieButton.addClass("buttonOption");
-  movieButton.text("Movies");
-  movieButton.attr("data-name", "movies")
-  $("#button-options").append(movieButton)
+  // var movieButton = $("<button>");
+  // movieButton.addClass("buttonOption");
+  // movieButton.text("Movies");
+  // movieButton.attr("data-name", "movies")
+  // $("#button-options").append(movieButton)
 }
 
 $(document).on("click", ".buttonOption", function() {
@@ -163,6 +163,7 @@ $("#add-animal").on("click", function(event) {
   event.preventDefault();
 
   // This line grabs the input from the textbox
+  
   var animal = $("#animal-input").val().trim();
 
   // Adding the animal from the textbox to our array
@@ -171,7 +172,8 @@ $("#add-animal").on("click", function(event) {
 
   // Calling renderButtons which handles the processing of our animals array
   renderButtonsAnimals();
-  $("#animal-input").val("");
+  
+  // $("#animal-input").val("");
 });
 
 // Function for displaying the animal info
