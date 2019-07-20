@@ -64,7 +64,7 @@ $(document).on("click", ".buttonOption", function() {
   // Deleting the buttons prior to adding new animals
   // (this is necessary otherwise you will have repeat buttons)
   $("#buttons-view").empty();
-
+  $("#button-options").empty();
   // Looping through the array of animals
   for (var i = 0; i < animals.length; i++) {
 
